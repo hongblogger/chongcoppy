@@ -117,7 +117,7 @@ $(window).load(function() {
 			$(divpopup).attr('id', 'myModal');
 			$(divpopup).attr('class', 'linhnguyen-modal');
 			$( "body" ).append(divpopup);
-			$("#myModal").html("<a href='http://www.batchuontyren.com/' target='_blank'><img src='http://dohungphat.com/wp-content/uploads/ty-ren12.jpg' width='500px'/>Ty ren tán chuồn</a>. Hàng đẹp, chất lượng giá cạnh tranh. <h2><a class='close-linhnguyen-modal'>X</a></h2>");
+			$("#myModal").html("<a href='http://www.batchuontyren.com/' target='_blank'><img src='http://dohungphat.com/wp-content/uploads/ty-ren12.jpg' width='500px'/><br/>Ty ren tán chuồn</a>. Hàng đẹp, chất lượng giá cạnh tranh. <h2><a class='close-linhnguyen-modal'>X</a></h2>");
 			$('#myModal').linhnguyen($('#myModal').data());
 		}
 });
