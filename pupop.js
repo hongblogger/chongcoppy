@@ -1,13 +1,13 @@
 //please contact me giaiphapthuonghieu.org@gmail.com
-//website http://giaiphapthuonghieu.vn or http://faceseo.vn
+//website http://www.batchuontyren.com/ or http://www.bloghong.com
 
 (function($) {
-    $.fn.linhnguyen = function(options) {        
+    $.fn.bloghong = function(options) {        
         var defaults = {  
 	    	animation: 'fadeAndPop', //fade, fadeAndPop, none
 		    animationspeed: 300, //how fast animtions are
 		    closeonbackgroundclick: true, //if you click background will modal close?
-		    dismissmodalclass: 'close-linhnguyen-modal' //the class of a button or element that will close an open modal
+		    dismissmodalclass: 'close-bloghong-modal' //the class of a button or element that will close an open modal
     	}; 
 
         var options = $.extend({}, defaults, options); 
@@ -17,12 +17,12 @@
         		topMeasure  = parseInt(modal.css('top')),
 				topOffset = modal.height() + topMeasure,
           		locked = false,
-				modalBG = $('.linhnguyen-modal-bg');
+				modalBG = $('.bloghong-modal-bg');
 
 			if(modalBG.length == 0) {
-				modalBG = $('<div class="linhnguyen-modal-bg" />').insertAfter(modal);
+				modalBG = $('<div class="bloghong-modal-bg" />').insertAfter(modal);
 			}		    
-			modal.bind('linhnguyen:open', function () {
+			modal.bind('bloghong:open', function () {
 			  modalBG.unbind('click.modalEvent');
 				$('.' + options.dismissmodalclass).unbind('click.modalEvent');
 				if(!locked) {
@@ -48,10 +48,10 @@
 						unlockModal()				
 					}
 				}
-				modal.unbind('linhnguyen:open');
+				modal.unbind('bloghong:open');
 			}); 	
 
-			modal.bind('linhnguyen:close', function () {
+			modal.bind('bloghong:close', function () {
 			  if(!locked) {
 					lockModal();
 					if(options.animation == "fadeAndPop") {
@@ -78,24 +78,24 @@
 						modalBG.css({'display' : 'none'});	
 					}		
 				}
-				modal.unbind('linhnguyen:close');
+				modal.unbind('bloghong:close');
 			});     
    	
-    	modal.trigger('linhnguyen:open')
+    	modal.trigger('bloghong:open')
 			
 			//Close Modal Listeners
 			var closeButton = $('.' + options.dismissmodalclass).bind('click.modalEvent', function () {
-			  modal.trigger('linhnguyen:close')
+			  modal.trigger('bloghong:close')
 			});
 			
 			if(options.closeonbackgroundclick) {
 				modalBG.css({"cursor":"pointer"})
 				modalBG.bind('click.modalEvent', function () {
-				  modal.trigger('linhnguyen:close')
+				  modal.trigger('bloghong:close')
 				});
 			}
 			$('body').keyup(function(e) {
-        		if(e.which===27){ modal.trigger('linhnguyen:close'); } // 27 is the keycode for the Escape key
+        		if(e.which===27){ modal.trigger('bloghong:close'); } // 27 is the keycode for the Escape key
 			});
 			
 			function unlockModal() { 
@@ -115,9 +115,9 @@ $(window).load(function() {
 			document.cookie = "adfpopunder1=adf";
 			var divpopup = document.createElement("div");
 			$(divpopup).attr('id', 'myModal');
-			$(divpopup).attr('class', 'linhnguyen-modal');
+			$(divpopup).attr('class', 'bloghong-modal');
 			$( "body" ).append(divpopup);
-			$("#myModal").html("<a href='http://www.batchuontyren.com/' target='_blank'><img src='http://dohungphat.com/wp-content/uploads/ty-ren12.jpg' width='500px'/><p>Ty ren tán chuồn</a>. Hàng đẹp, chất lượng giá cạnh tranh.</p> <h2><a class='close-linhnguyen-modal'>X</a></h2>");
-			$('#myModal').linhnguyen($('#myModal').data());
+			$("#myModal").html("<a href='http://www.batchuontyren.com/' target='_blank'><img src='http://dohungphat.com/wp-content/uploads/ty-ren12.jpg' width='500px'/><p>Ty ren tán chuồn</a>. Hàng đẹp, chất lượng giá cạnh tranh.</p> <h2><a class='close-bloghong-modal'>X</a></h2>");
+			$('#myModal').bloghong($('#myModal').data());
 		}
 });
