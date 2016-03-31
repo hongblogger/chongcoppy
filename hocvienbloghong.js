@@ -33,5 +33,5 @@
       //]]>
 	/*
 	var url_popup = 'http://www.bloghong.com/';
-	<script src="https://jgoogle.googlecode.com/svn/trunk/popup.js"></script>
+	<script src="https://rawgit.com/hongblogger/chongcoppy/master/hocvienbloghong.js"></script>
 	*/
